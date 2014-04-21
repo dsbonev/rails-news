@@ -1,4 +1,4 @@
 class Article < ActiveRecord::Base
   belongs_to :author
-  validates_presence_of :summary, :body, :author
+  validates_presence_of :title, :summary, :body, :author
 end
