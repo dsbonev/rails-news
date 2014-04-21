@@ -29,9 +29,7 @@
           %a.brand(href="#") News
           .container.nav-collapse
             %ul.nav
-              %li= link_to "Link 1", "/path1"
-              %li= link_to "Link 2", "/path2"
-              %li= link_to "Link 3", "/path3"
+              %li= link_to "Home", "/"
 
     .container-fluid
 
@@ -39,13 +37,12 @@
         .span3
           .well.sidebar-nav
             %ul.nav.nav-list
-              %li.nav-header Sidebar
-              %li= link_to "Link 1", "/path1"
-              %li= link_to "Link 2", "/path2"
-              %li= link_to "Link 3", "/path3"
+              %li.nav-header Articles
+              - Article.all.each do |a|
+                %li= link_to a.title, article_path(a)
         .span9
           = bootstrap_flash
           = yield
-    
+
       %footer
         %p &copy; Company 2014
