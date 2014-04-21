@@ -35,6 +35,15 @@ gem 'simple_form'
 
 gem "haml-rails"
 
+gem 'seed-fu'
+
+group :test do
+  gem 'factory_girl'
+  gem 'factory_girl_rails'
+  gem 'shoulda-context'
+  gem 'faker', '~> 1.3.0'
+end
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
